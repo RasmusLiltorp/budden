@@ -59,11 +59,36 @@ describe('mcp stdio server', () => {
     const { tools } = await client.listTools();
     const names = tools.map((t) => t.name);
     expect(names).toContain('list_lists');
+    expect(names).toContain('create_list');
+    expect(names).toContain('archive_list');
     expect(names).toContain('add_contact');
     expect(names).toContain('log_interaction');
     expect(names).toContain('get_today_queue');
     expect(names).toContain('search');
-    expect(tools.length).toBe(13);
+    expect(tools.length).toBe(15);
+  });
+
+  test('create_list + archive_list lifecycle', async () => {
+    const created = (await callJson('create_list', {
+      name: 'Q3 fundraising',
+      goal: 'book 10 angel intros',
+    })) as { list: { id: string; name: string; status: string } };
+    expect(created.list.name).toBe('Q3 fundraising');
+    expect(created.list.status).toBe('active');
+
+    const before = (await callJson('list_lists')) as { lists: { id: string }[] };
+    expect(before.lists.some((l) => l.id === created.list.id)).toBe(true);
+
+    await callJson('archive_list', { id: created.list.id });
+
+    const after = (await callJson('list_lists')) as { lists: { id: string }[] };
+    expect(after.lists.some((l) => l.id === created.list.id)).toBe(false);
+
+    const all = (await callJson('list_lists', { include_archived: true })) as {
+      lists: { id: string; status: string }[];
+    };
+    const archived = all.lists.find((l) => l.id === created.list.id);
+    expect(archived?.status).toBe('archived');
   });
 
   test('list_lists shows the seeded list', async () => {

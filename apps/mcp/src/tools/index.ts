@@ -1,6 +1,8 @@
 import type { Tool } from '../types';
 import { addChannelTool } from './add-channel';
 import { addContactTool } from './add-contact';
+import { archiveListTool } from './archive-list';
+import { createListTool } from './create-list';
 import { getContactTool } from './get-contact';
 import { getListTool } from './get-list';
 import { listContactsTool } from './list-contacts';
@@ -15,6 +17,8 @@ import { updateContactTool } from './update-contact';
 export const allTools: Tool<any>[] = [
   listListsTool,
   getListTool,
+  createListTool,
+  archiveListTool,
   listContactsTool,
   getContactTool,
   addContactTool,
