@@ -90,7 +90,8 @@ Test entry points:
 ## Where the docs live
 
 - `README.md` — user-facing intro, install, MCP setup
-- `BuddenPLAN.md` — frozen original build plan (historical; phases 1–3 are done)
+- `CHANGELOG.md` — release notes (Keep a Changelog format)
+- `CONTRIBUTING.md` — how to set up, send a PR, run the full check
 - `skills/` — workflow skills for **end users** to install in their personal Claude (not for this repo)
 - inline JSDoc — none. We rely on names + zod schemas + small files. If you find yourself wanting a comment, see if the code can be clearer first.
 
