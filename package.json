@@ -1,0 +1,38 @@
+{
+  "name": "budden",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Self-hosted, AI-native CRM. CLI + Web + MCP, one SQLite DB.",
+  "license": "MIT",
+  "type": "module",
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "bun run --filter @budden/web dev",
+    "dev:cli": "bun run --cwd apps/cli src/index.ts",
+    "dev:mcp": "bun run apps/mcp/src/stdio.ts",
+    "build": "bun run db:generate && bun run --filter @budden/web build && bun run build:cli",
+    "build:cli": "bun build apps/cli/src/index.ts --compile --outfile=dist/budden",
+    "build:web": "bun run --filter @budden/web build",
+    "lint": "bun x biome check .",
+    "lint:fix": "bun x biome check --write .",
+    "format": "bun x biome format --write .",
+    "typecheck": "bun run --filter '*' typecheck",
+    "test": "bun test",
+    "db:generate": "bun run --filter @budden/core db:generate",
+    "db:bundle": "bun run --filter @budden/core db:bundle",
+    "db:migrate": "bun run --filter @budden/core db:migrate"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/bun": "^1.1.14",
+    "typescript": "^5.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RasmusLiltorp/budden.git"
+  },
+  "author": "Rasmus Liltorp",
+  "engines": {
+    "bun": ">=1.1.0"
+  }
+}

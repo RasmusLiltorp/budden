@@ -1,0 +1,22 @@
+{
+  "name": "@budden/mcp",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "bin": { "budden-mcp": "./src/stdio.ts" },
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "dev": "bun run src/stdio.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@budden/config": "workspace:*",
+    "@budden/core": "workspace:*",
+    "@budden/shared": "workspace:*",
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "zod": "^3.23.8"
+  }
+}
