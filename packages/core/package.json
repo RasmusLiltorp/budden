@@ -19,7 +19,7 @@
     "@budden/config": "workspace:*",
     "drizzle-orm": "^0.36.4",
     "ulid": "^2.3.0",
-    "zod": "^3.23.8"
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "drizzle-kit": "^0.28.1"
