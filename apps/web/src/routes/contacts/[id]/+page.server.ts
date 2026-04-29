@@ -1,4 +1,3 @@
-import { db } from '$lib/server/db';
 import {
   channelsForContact,
   findContactByPrefix,
@@ -10,6 +9,7 @@ import {
 } from '@budden/core';
 import { Direction, InteractionChannel, MembershipStatus, parseOccurredAt } from '@budden/shared';
 import { error, fail, redirect } from '@sveltejs/kit';
+import { db } from '$lib/server/db';
 import type { Actions, PageServerLoad } from './$types';
 
 export const load: PageServerLoad = ({ params }) => {

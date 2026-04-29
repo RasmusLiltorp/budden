@@ -1,6 +1,6 @@
 import { findListByPrefix, getFollowupQueue, getInbox, getTodayQueue } from '@budden/core';
 import { z } from 'zod';
-import { type Tool, err, ok } from '../types';
+import { err, ok, type Tool } from '../types';
 
 export const todayQueueTool: Tool<{ list_id: z.ZodString }> = {
   name: 'get_today_queue',

@@ -6,7 +6,7 @@ import {
   membershipsWithListsForContact,
 } from '@budden/core';
 import { z } from 'zod';
-import { type Tool, err, ok } from '../types';
+import { err, ok, type Tool } from '../types';
 
 export const getContactTool: Tool<{ id: z.ZodString }> = {
   name: 'get_contact',

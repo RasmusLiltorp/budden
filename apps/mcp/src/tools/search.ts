@@ -1,6 +1,6 @@
 import { search } from '@budden/core';
 import { z } from 'zod';
-import { type Tool, ok } from '../types';
+import { ok, type Tool } from '../types';
 
 export const searchTool: Tool<{ query: z.ZodString }> = {
   name: 'search',

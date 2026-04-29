@@ -7,7 +7,7 @@ import {
 } from '@budden/core';
 import { ChannelType, Priority } from '@budden/shared';
 import { z } from 'zod';
-import { type Tool, err, ok } from '../types';
+import { err, ok, type Tool } from '../types';
 
 const channelInput = z.object({
   type: ChannelType,

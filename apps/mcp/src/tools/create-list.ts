@@ -1,6 +1,6 @@
 import { createList } from '@budden/core';
 import { z } from 'zod';
-import { type Tool, ok } from '../types';
+import { ok, type Tool } from '../types';
 
 export const createListTool: Tool<{
   name: z.ZodString;

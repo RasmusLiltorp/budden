@@ -1,6 +1,6 @@
-import { isAuthed } from '$lib/server/session';
 import type { Handle } from '@sveltejs/kit';
 import { redirect } from '@sveltejs/kit';
+import { isAuthed } from '$lib/server/session';
 
 const PUBLIC_PATHS = new Set(['/login']);
 

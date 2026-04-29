@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "type": "module",
-  "bin": { "budden": "./src/index.ts" },
+  "bin": {
+    "budden": "./src/index.ts"
+  },
   "scripts": {
     "dev": "bun run src/index.ts",
     "build": "bun build src/index.ts --compile --outfile=../../dist/budden",

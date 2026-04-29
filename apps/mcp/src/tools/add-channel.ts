@@ -1,7 +1,7 @@
 import { addChannel, findContactByPrefix } from '@budden/core';
 import { ChannelType } from '@budden/shared';
 import { z } from 'zod';
-import { type Tool, err, ok } from '../types';
+import { err, ok, type Tool } from '../types';
 
 export const addChannelTool: Tool<{
   contact_id: z.ZodString;

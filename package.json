@@ -5,7 +5,10 @@
   "description": "Self-hosted, AI-native CRM. CLI + Web + MCP, one SQLite DB.",
   "license": "MIT",
   "type": "module",
-  "workspaces": ["apps/*", "packages/*"],
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "dev": "bun run --filter @budden/web dev",
     "dev:cli": "bun run --cwd apps/cli src/index.ts",
@@ -23,9 +26,9 @@
     "db:migrate": "bun run --filter @budden/core db:migrate"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
+    "@biomejs/biome": "^2.4.13",
     "@types/bun": "^1.1.14",
-    "typescript": "^5.7.2"
+    "typescript": "^6.0.3"
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,6 @@
 import { archiveList, findListByPrefix } from '@budden/core';
 import { z } from 'zod';
-import { type Tool, err, ok } from '../types';
+import { err, ok, type Tool } from '../types';
 
 export const archiveListTool: Tool<{ id: z.ZodString }> = {
   name: 'archive_list',

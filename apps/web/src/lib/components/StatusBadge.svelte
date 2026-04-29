@@ -1,6 +1,6 @@
 <script lang="ts">
-import { statusClasses } from '$lib/status-colors';
 import type { MembershipStatus } from '@budden/shared';
+import { statusClasses } from '$lib/status-colors';
 
 const { status }: { status: MembershipStatus } = $props();
 </script>

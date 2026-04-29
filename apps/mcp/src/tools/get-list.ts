@@ -1,7 +1,7 @@
 import { findListByPrefix, membershipsForList } from '@budden/core';
 import type { MembershipStatus } from '@budden/shared';
 import { z } from 'zod';
-import { type Tool, err, ok } from '../types';
+import { err, ok, type Tool } from '../types';
 
 export const getListTool: Tool<{ id: z.ZodString }> = {
   name: 'get_list',

@@ -1,7 +1,7 @@
 import { findListByPrefix, membershipsWithContactsForList } from '@budden/core';
 import { MembershipStatus, Priority } from '@budden/shared';
 import { z } from 'zod';
-import { type Tool, err, ok } from '../types';
+import { err, ok, type Tool } from '../types';
 
 export const listContactsTool: Tool<{
   list_id: z.ZodString;

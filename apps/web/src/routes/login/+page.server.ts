@@ -1,5 +1,5 @@
-import { expectedToken, setSession } from '$lib/server/session';
 import { fail, redirect } from '@sveltejs/kit';
+import { expectedToken, setSession } from '$lib/server/session';
 import type { Actions, PageServerLoad } from './$types';
 
 export const load: PageServerLoad = ({ locals, url }) => {

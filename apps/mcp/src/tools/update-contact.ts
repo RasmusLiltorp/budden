@@ -1,6 +1,6 @@
 import { findContactByPrefix, updateContact } from '@budden/core';
 import { z } from 'zod';
-import { type Tool, err, ok } from '../types';
+import { err, ok, type Tool } from '../types';
 
 export const updateContactTool: Tool<{
   id: z.ZodString;

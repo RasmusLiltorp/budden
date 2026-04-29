@@ -1,6 +1,6 @@
 import { listLists } from '@budden/core';
 import { z } from 'zod';
-import { type Tool, ok } from '../types';
+import { ok, type Tool } from '../types';
 
 export const listListsTool: Tool<{ include_archived: z.ZodOptional<z.ZodBoolean> }> = {
   name: 'list_lists',

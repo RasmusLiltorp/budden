@@ -1,7 +1,7 @@
 import { randomBytes } from 'node:crypto';
-import { setSession } from '$lib/server/session';
 import { configPath, loadConfig, saveConfig } from '@budden/config';
 import { redirect } from '@sveltejs/kit';
+import { setSession } from '$lib/server/session';
 import type { Actions, PageServerLoad } from './$types';
 
 export const load: PageServerLoad = () => {

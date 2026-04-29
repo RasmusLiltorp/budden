@@ -6,7 +6,7 @@ import {
 } from '@budden/core';
 import { Direction, InteractionChannel, parseOccurredAt } from '@budden/shared';
 import { z } from 'zod';
-import { type Tool, err, ok } from '../types';
+import { err, ok, type Tool } from '../types';
 
 export const logInteractionTool: Tool<{
   contact_id: z.ZodString;

@@ -1,5 +1,5 @@
-import { db } from '$lib/server/db';
 import { getFollowupQueue, getInbox, getTodayQueue, listLists } from '@budden/core';
+import { db } from '$lib/server/db';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = () => {

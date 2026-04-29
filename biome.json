@@ -1,18 +1,19 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.4.13/schema.json",
   "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
   "files": {
     "ignoreUnknown": true,
-    "ignore": [
-      "**/node_modules",
-      "**/dist",
-      "**/build",
-      "**/.svelte-kit",
-      "**/drizzle/meta",
-      "**/migrations-bundle.ts",
-      "**/.bun-cache",
-      "**/.tmp",
-      "**/bun.lock"
+    "includes": [
+      "**",
+      "!**/node_modules",
+      "!**/dist",
+      "!**/build",
+      "!**/.svelte-kit",
+      "!**/drizzle/meta",
+      "!**/migrations-bundle.ts",
+      "!**/.bun-cache",
+      "!**/.tmp",
+      "!**/bun.lock"
     ]
   },
   "formatter": {
@@ -36,7 +37,7 @@
   },
   "overrides": [
     {
-      "include": ["**/*.svelte"],
+      "includes": ["**/*.svelte"],
       "linter": {
         "rules": {
           "style": {
@@ -52,6 +53,11 @@
       "semicolons": "always",
       "trailingCommas": "all",
       "arrowParentheses": "always"
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
     }
   }
 }

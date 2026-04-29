@@ -13,7 +13,7 @@ export type Tool<Shape extends ZodRawShape = ZodRawShape> = {
   name: string;
   description: string;
   inputSchema: Shape;
-  handler: (args: z.objectOutputType<Shape, z.ZodTypeAny>, ctx: ToolContext) => ToolResult;
+  handler: (args: z.infer<z.ZodObject<Shape>>, ctx: ToolContext) => ToolResult;
 };
 
 export const ok = (data: unknown): ToolResult => ({

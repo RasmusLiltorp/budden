@@ -1,7 +1,7 @@
 import { findContactByPrefix, findListByPrefix, setStatus } from '@budden/core';
 import { MembershipStatus } from '@budden/shared';
 import { z } from 'zod';
-import { type Tool, err, ok } from '../types';
+import { err, ok, type Tool } from '../types';
 
 export const setStatusTool: Tool<{
   contact_id: z.ZodString;
