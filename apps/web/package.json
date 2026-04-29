@@ -1,0 +1,29 @@
+{
+  "name": "@budden/web",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun --bun x vite dev",
+    "build": "bun --bun x vite build",
+    "preview": "bun --bun x vite preview",
+    "start": "bun build/index.js",
+    "typecheck": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
+  },
+  "dependencies": {
+    "@budden/config": "workspace:*",
+    "@budden/core": "workspace:*",
+    "@budden/mcp": "workspace:*",
+    "@budden/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-node": "^5.2.9",
+    "@sveltejs/kit": "^2.8.5",
+    "@sveltejs/vite-plugin-svelte": "^7.0.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "svelte": "^5.2.7",
+    "svelte-check": "^4.1.0",
+    "tailwindcss": "^4.0.0",
+    "vite": "^8.0.10"
+  }
+}

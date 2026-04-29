@@ -1,0 +1,21 @@
+{
+  "name": "@budden/cli",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "budden": "./src/index.ts"
+  },
+  "scripts": {
+    "dev": "bun run src/index.ts",
+    "build": "bun build src/index.ts --compile --outfile=../../dist/budden",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@budden/config": "workspace:*",
+    "@budden/core": "workspace:*",
+    "@budden/mcp": "workspace:*",
+    "@budden/shared": "workspace:*",
+    "commander": "^12.1.0"
+  }
+}
