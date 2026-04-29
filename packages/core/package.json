@@ -17,11 +17,11 @@
   "dependencies": {
     "@budden/shared": "workspace:*",
     "@budden/config": "workspace:*",
-    "drizzle-orm": "^0.36.4",
+    "drizzle-orm": "^0.45.2",
     "ulid": "^2.3.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "drizzle-kit": "^0.28.1"
+    "drizzle-kit": "^0.31.10"
   }
 }
