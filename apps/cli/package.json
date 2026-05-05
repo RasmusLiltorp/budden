@@ -16,6 +16,6 @@
     "@budden/core": "workspace:*",
     "@budden/mcp": "workspace:*",
     "@budden/shared": "workspace:*",
-    "commander": "^12.1.0"
+    "commander": "^14.0.3"
   }
 }
